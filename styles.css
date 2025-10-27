@@ -1,0 +1,187 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    padding: 0;
+}
+
+/* ------------------------------
+   Main wrapper
+------------------------------- */
+main {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;    
+}
+
+/* ------------------------------
+   Title (footer)
+------------------------------- */
+#title {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #dadada40;
+    bottom: 0;
+    border-top: 1px solid #dadada;
+}
+
+#title h1 {
+    margin: 0;
+    color: #a3a3a3;
+    font-size: 14px;
+    font-family: 'Baloo Thambi 2', cursive;
+}
+
+/* ------------------------------
+   Calculator
+------------------------------- */
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 480px;
+    max-width: 100;
+    max-height:90vh;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 252);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    flex-grow: 1; /* expands to fill main vertically */
+}
+
+/* ------------------------------
+   Screen
+------------------------------- */
+.screen {
+    width: 100%;
+    flex-grow: 0; /* fixed size, doesn’t stretch */
+    height: 200px;
+    background-color: rgb(229, 255, 190);
+    color: grey;
+    letter-spacing: 2px;
+    padding-bottom: 4px;
+}
+
+/* Numbers inside screen */
+.numbers {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: flex-end;
+}
+
+.numbers > p {
+    padding-right: 10px;
+    margin: 0;
+    font-family: 'Baloo Thambi 2', cursive;
+    font-size: 16px;
+}
+
+/* Memory */
+.memory {
+    display: flex;
+}
+
+.memory > p {
+    margin: 2px;
+    padding: 5px;
+    font-family: 'Baloo Thambi 2', cursive;
+}
+
+/* ------------------------------
+   Buttons
+------------------------------- */
+#calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    flex-grow: 1; /* fills remaining space */
+    padding-bottom: 2px;
+}
+
+#calculator-buttons button {
+    width: 90%;
+    height: 90%;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    margin: auto;
+    font-size: 12pt;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(218, 218, 218);
+}
+
+#calculator-buttons #decimal {
+    background-color: rgb(218, 218, 218);
+}
+
+#calculator-buttons #equals {
+    background-color: rgb(246, 155, 170);
+    font-weight: 900; 
+    color: white;
+}
+
+#calculator-buttons .operation,
+#calculator-buttons #delete {
+    background-color: white;
+}
+
+#calculator-buttons .m-buttons {
+    color: rgb(246, 155, 170);
+    font-weight: 900;
+    background-color: white;
+}
+
+#calculator-buttons > button:hover {
+    background-color: pink;
+}
+
+/* ------------------------------
+   Headings
+------------------------------- */
+h3 {
+    float: right;
+    padding-right: 1em;
+}
+
+/* ------------------------------
+   Mobile Styles
+------------------------------- */
+@media screen and (max-width: 600px) {
+
+    main {
+        min-height: 100dvh;
+        height: 100dvh; /* fixed viewport height */
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .calculator {
+        width: 100%;
+        max-height:85vh;
+        flex-grow: 1;
+    }
+
+    .screen {
+        height: 25%; /* smaller on mobile */
+    }
+
+    #calculator-buttons {
+        height: 70%; /* remaining space for buttons */
+    }
+
+    #title, #title h1 {
+        /*display: none; */
+    }
+}
