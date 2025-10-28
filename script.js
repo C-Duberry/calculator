@@ -1,6 +1,4 @@
 
-
-let log = console.log
 let currentCalculation = [];
 let resultsDisplayed;
 let lastClickedButtonId = null;
