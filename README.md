@@ -4,7 +4,7 @@ A web calculator inspired by Microsoft’s design, built with HTML, CSS, and Jav
 
 ## Demo
 
-<img src="screenshots/calculator-screenshot.png" width="400" height="600" />
+
 
 ## Features
 
