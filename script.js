@@ -378,23 +378,6 @@ const clear = (target) => {
 
 
 
-const test =() => {
-  log("current cal:   " , currentCalculation)
-  log("last button:     " + lastClickedButtonId)
-  log("memory counter:   " + memoryCounter)
-  log("results displayed:   " + resultsDisplayed)
-  log("has a decimal:        " + hasDecimal())
-  log("last value:    "      +    getLastValue())
-  log("operator index " +   (operatorIndex()))
-
-
-
-
-
-
-}
-
-
 
 
 
